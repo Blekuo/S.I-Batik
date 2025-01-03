@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: wheat">
     <div class="container">
         <a class="navbar-brand text-muted" href="#">
-            <img src="{{ $icon->url }}" alt="" width="10%" style="border-radius: 25px">
-            S.I
+            <img src="{{ $icon->url }}" alt="" width="10%" style="border-radius: 10px">
+            {{ env('APP_NAME') }}
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
