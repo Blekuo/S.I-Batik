@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
 
         $staff = User::factory()->create([
             'name' => 'Blue',
-            'email' => 'fanafahriyanto11rpl2@gmail.com',
+            'email' => 'blue@blue.com',
             'password' => Hash::make('admin')
         ]);
         $staff->roles()->attach(Role::where('name', 'staff')->first());
