@@ -7,10 +7,10 @@
     <!--begin::Col-->
     <div class="col">
         <!--begin::Small Box Widget 1-->
-        <div class="small-box text-bg-primary">
+        <div class="small-box" style="background: wheat">
             <div class="inner p-4">
-                <h3>150</h3>
-                <p>Order</p>
+                <h3 class="text-black">150</h3>
+                <p class="text-black">Order</p>
             </div>
             <div class="small-box-icon">
                 <i class="fas fa-shopping-cart fa-lg"></i>
@@ -21,7 +21,7 @@
     <!--end::Col-->
     <div class="col">
         <!--begin::Small Box Widget 2-->
-        <div class="small-box text-bg-success">
+        <div class="small-box" style="background: wheat">
             <div class="inner p-4">
                 <h3>53</h3>
                 <p>Barang</p>
@@ -35,8 +35,8 @@
     <!--end::Col-->
     <div class="col">
         <!--begin::Small Box Widget 3-->
-        <div class="small-box text-bg-warning">
-            <div class="inner text-white p-4">
+        <div class="small-box" style="background: wheat">
+            <div class="inner p-4">
                 <h3>{{ \App\Models\User::count() }}</h3>
                 <p>Users</p>
             </div>
