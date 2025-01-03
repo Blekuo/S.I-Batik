@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Permission;
 
 class UserSeeder extends Seeder
 {
@@ -21,10 +22,12 @@ class UserSeeder extends Seeder
             'password' => Hash::make('admin')
         ])->roles()->attach(Role::where('name', 'admin')->first());
 
-        User::factory()->create([
+        $staff = User::factory()->create([
             'name' => 'Blue',
             'email' => 'fanafahriyanto11rpl2@gmail.com',
             'password' => Hash::make('admin')
-        ])->roles()->attach(Role::where('name', 'admin')->first());
+        ]);
+        $staff->roles()->attach(Role::where('name', 'staff')->first());
+        $staff->permissions()->attach(Permission::where('slug', 'inventory')->first());
     }
 }

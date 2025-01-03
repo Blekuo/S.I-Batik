@@ -13,6 +13,7 @@ data-accordion="false">
         <p>Daftar Inventaris</p>
     </a>
 </li>
+{{--
 <li class="nav-item">
     <a href="#" class="nav-link">
         <i class="nav-icon bi bi-box-seam-fill"></i>
@@ -41,5 +42,6 @@ data-accordion="false">
             </a>
         </li>
     </ul>
-</li>
+</li> --}}
+
 </ul>

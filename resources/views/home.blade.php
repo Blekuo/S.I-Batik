@@ -10,7 +10,7 @@
         <div class="small-box text-bg-primary">
             <div class="inner p-4">
                 <h3>150</h3>
-                <p>New Orders</p>
+                <p>Order</p>
             </div>
             <div class="small-box-icon">
                 <i class="fas fa-shopping-cart fa-lg"></i>
@@ -23,8 +23,8 @@
         <!--begin::Small Box Widget 2-->
         <div class="small-box text-bg-success">
             <div class="inner p-4">
-                <h3>53<sup class="fs-5">%</sup></h3>
-                <p>Bounce Rate</p>
+                <h3>53</h3>
+                <p>Barang</p>
             </div>
             <div class="small-box-icon">
                 <i class="fas fa-box fa-lg"></i>
@@ -53,7 +53,7 @@
 @include('layouts.session.alert')
 
 <div class="mt-4">
-    <div class="card card-body shadow" style="background-color: #4d2600">
+    <div class="card card-body shadow" style="background-color: var(--card-color)">
         <h5 class="text-light">Selamat Malam</h5>
     </div>
 </div>

@@ -12,7 +12,7 @@ class GuestController extends Controller
     {
         $icon = Webpack::where('name', 'webicon')->first();
         if (Auth::check()) {
-            return redirect('/home');
+            return redirect('/dashboard');
         }
         return view('welcome', compact('icon'));
     }

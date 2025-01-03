@@ -2,15 +2,16 @@
 @section('content')
 <style>
     body {
-        background: rgb(103, 27, 22);
+        background: url('/img/bg.png');
         background-repeat: no-repeat;
         background-size: cover;
         }
 </style>
-<div class="container" style="margin-top: 10%;margin-bottom: 10%">
+@include('layouts.loading.load')
+<div class="container d-none" style="margin-top: 3%;" id="content">
     <div class="d-flex justify-content-center">
         <div>
-            <div class="card card-body shadow" style="border-radius: 5px;width: 40rem;background-color: wheat">
+            <div class="card card-body shadow" style="border-radius: 5px;width: 40rem;background: url('/img/navbar-side.png')">
                 <div class="d-flex justify-content-center">
                     <img src="{{ \App\Models\Webpack::where('name', 'webicon')->first()->url }}" alt="" width="20%" style="border-radius: 20px">
                 </div>

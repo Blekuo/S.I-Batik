@@ -17,10 +17,10 @@ class HasPermission
     public function handle(Request $request, Closure $next): Response
     {
         // dd(last(explode('/', $request->path())));
-        if (Auth::user()->hasRole('admin')) {
+        if ($request->user()->hasRole('admin')) {
             return $next($request);
         }
-        else if (Auth::user()->hasPermission(last(explode('/', $request->path())))) {
+        if ($request->user()->hasPermission(last(explode('/', $request->path())))) {
             return $next($request);
         }
         return redirect('/');

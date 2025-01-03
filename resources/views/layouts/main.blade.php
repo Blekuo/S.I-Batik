@@ -11,7 +11,11 @@
         <title>{{ env('APP_NAME') }}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
-
+    <style>
+        :root {
+            --card-color: #4d2600;
+        }
+    </style>
 <body>
     <div>
         @yield('content')

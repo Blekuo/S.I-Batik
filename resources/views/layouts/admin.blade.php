@@ -32,13 +32,20 @@
     <!-- jsvectormap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
         integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous" />
+    <style>
+        :root {
+            --card-color: #4d2600;
+        }
+    </style>
+    @livewireStyles
 </head>
 <!--end::Head-->
 <!--begin::Body-->
 
 <body class="layout-fixed sidebar-expand-lg" style="background: url('/img/bg.png');background-repeat: no-repeat;background-size: cover">
+    @include('layouts.loading.load')
     <!--begin::App Wrapper-->
-    <div class="app-wrapper">
+    <div class="app-wrapper d-none" id="content">
         <!--begin::Header-->
         <nav class="app-header navbar navbar-expand shadow" style="background-color: wheat">
             <!--begin::Container-->
@@ -169,6 +176,12 @@
                         <div class="col-sm-6">
                             <h3 class="mb-0 text-light">@yield('title')</h3>
                         </div>
+                        <div class="col-sm-6 text-light">
+                            <ol class="breadcrumb float-sm-end">
+                              <li class="breadcrumb-item text-light">Home</li>
+                              <li class="breadcrumb-item text-light active text-capitalize" aria-current="page">{{ request()->path() }}</li>
+                            </ol>
+                          </div>
                     </div>
                     <!--end::Row-->
                 </div>
@@ -245,6 +258,8 @@
           }
         });
       </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      @livewireScripts
 </body>
 <!--end::Body-->
 

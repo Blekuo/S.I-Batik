@@ -60,6 +60,6 @@ class User extends Authenticatable
 
     public function hasPermission($slug)
     {
-        return $this->permissions()->where('name', $slug)->count() == 1;
+        return $this->permissions()->where('slug', $slug)->count() == 1;
     }
 }
