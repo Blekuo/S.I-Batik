@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $icon = Webpack::where('name', 'webicon')->first();
         if (Auth::check()) {
+            session()->flash('status','Login Success!');
             return view('home', compact('icon'));
         }
         return view('welcome', compact('icon'));

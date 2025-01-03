@@ -20,5 +20,11 @@ class UserSeeder extends Seeder
             'role' => 'admin',
             'password' => Hash::make('admin')
         ]);
+        User::factory()->create([
+            'name' => 'Blue',
+            'email' => 'fanafahriyanto11rpl2@gmail.com',
+            'role' => 'admin',
+            'password' => Hash::make('admin')
+        ]);
     }
 }

@@ -10,6 +10,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
         integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" />
     <!--end::Fonts-->
@@ -107,9 +109,18 @@
                             </li>
                             <!--end::User Image-->
                             <!--begin::Menu Footer-->
-                            <li class="user-footer">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                            <li class="user-footer row">
+                                <div class="col">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+
+                                </div>
+                                <div class="col">
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        @method('POST')
+                                        <button type="submit" class="btn btn-default btn-flat float-end">Log out</button>
+                                    </form>
+                                </div>
                             </li>
                             <!--end::Menu Footer-->
                         </ul>
