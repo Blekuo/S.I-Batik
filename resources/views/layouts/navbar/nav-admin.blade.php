@@ -2,13 +2,13 @@
 <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
 data-accordion="false">
 <li class="nav-item">
-    <a href="/" class="nav-link">
+    <a href="/" class="nav-link" style="font-size: 17px">
         <i class="nav-icon bi bi-speedometer"></i>
         <p>Dashboard</p>
     </a>
 </li>
 <li class="nav-item">
-    <a href="/inventory" class="nav-link">
+    <a href="/inventory" class="nav-link" style="font-size: 17px">
         <i class="nav-icon fas fa-box"></i>
         <p>Daftar Inventaris</p>
     </a>

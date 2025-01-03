@@ -14,7 +14,7 @@
                 Tambah Data Barang
             </button>
 
-            <div class="modal modal-lg @if ($this->visible) show d-block @endif" tabindex="-1" style="margin-top: 8%">
+            <div class="modal modal-lg @if ($this->visible) show d-block @endif" tabindex="-1" style="margin-top: 7%;margin-left: -2%">
                 <div class="card modal-dialog p-4" style="background: url('/img/box.png');background-repeat: no-repeat;background-size: cover;">
                     <div class="modal-content" style="background-color: #663300;"
                         >

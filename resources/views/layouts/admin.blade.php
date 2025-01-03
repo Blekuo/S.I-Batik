@@ -145,13 +145,9 @@
             <div class="sidebar-brand">
                 <!--begin::Brand Link-->
                 <a href="/index.html" class="brand-link">
-                    <!--begin::Brand Image-->
-                    <img src="{{ \App\Models\Webpack::where('name','webicon')->first()->url }}" alt="AdminLTE Logo"
-                        class="brand-image opacity-75 shadow" style="border-radius: 20px" />
-                    <!--end::Brand Image-->
-                    <!--begin::Brand Text-->
-                    <span class="brand-text fw-light">{{ env('APP_NAME') }} v{{ env('APP_VERSION') }}</span>
-                    <!--end::Brand Text-->
+                            <img src="{{ \App\Models\Webpack::where('name','webicon')->first()->url }}" alt="AdminLTE Logo"
+                            class="brand-image opacity-75 shadow" style="border-radius: 20px" />
+                            <span class="brand-text fw-bold">{{ env('APP_NAME') }} v{{ env('APP_VERSION') }}</span>
                 </a>
                 <!--end::Brand Link-->
             </div>

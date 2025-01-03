@@ -50,11 +50,11 @@
 
 </div>
 <!--end::Row-->
-@include('layouts.session.alert')
 
 <div class="mt-4">
     <div class="card card-body shadow" style="background-color: var(--card-color)">
-        <h5 class="text-light">Selamat Malam</h5>
+        @include('layouts.session.alert')
+        <h5 class="text-light">Selamat Datang, <span class="fw-bold">{{ Auth::user()->name }}</span>!</h5>
     </div>
 </div>
 @endsection
