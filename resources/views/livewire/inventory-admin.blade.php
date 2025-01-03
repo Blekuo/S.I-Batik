@@ -34,12 +34,12 @@
                                 <div class="mb-3">
                                     <label for="" class="form-label text-white">Nama Barang</label>
                                     <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                        placeholder="" />
+                                        placeholder="e.g Mie Kardus..." />
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label text-white">Stock Barang</label>
                                     <input type="number" class="form-control" name="" id="" aria-describedby="helpId"
-                                        placeholder="" />
+                                        placeholder="e.g 0-1000..." />
                                 </div>
 
                         </div>
@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="mb-3">
-        <input type="search" class="form-control" wire:model.live.debounce.150ms='search'>
+        <input type="search" class="form-control" placeholder="Cari Nama Barang, Kategori..." wire:model.live.debounce.150ms='search'>
     </div>
     <div class="table-responsive-lg">
         <table class="table table-dark">
