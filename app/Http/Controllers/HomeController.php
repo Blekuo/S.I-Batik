@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware([\App\Http\Middleware\Authenticated::class,\App\Http\Middleware\SuperUser::class]);
     }
 
     /**
@@ -26,10 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $icon = Webpack::where('name', 'webicon')->first();
-        if (Auth::check()) {
-            session()->flash('status','Login Success!');
-            return view('home', compact('icon'));
-        }
-        return view('welcome', compact('icon'));
+        session()->flash('status','Login Success!');
+        return view('home', compact('icon'));
     }
 }

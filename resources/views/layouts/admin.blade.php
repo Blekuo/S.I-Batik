@@ -93,17 +93,17 @@
                     <!--begin::User Menu Dropdown-->
                     <li class="nav-item dropdown user-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="/dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow"
+                            <img src="{{ Auth::user()->img }}" class="user-image rounded-circle shadow"
                                 alt="User Image" />
                             <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                             <!--begin::User Image-->
                             <li class="user-header" style="background-color: wheat">
-                                <img src="/dist/assets/img/user2-160x160.jpg" class="rounded-circle shadow"
+                                <img src="{{ Auth::user()->img }}" class="rounded-circle shadow"
                                     alt="User Image" />
                                 <p>
-                                    {{ Auth::user()->name }} - <span class="text-capitalize">{{ Auth::user()->role }}</span>
+                                    {{ Auth::user()->name }}
                                     <small>{{ Auth::user()->created_at }}</small>
                                 </p>
                             </li>

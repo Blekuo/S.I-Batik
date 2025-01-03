@@ -8,7 +8,7 @@ data-accordion="false">
     </a>
 </li>
 <li class="nav-item">
-    <a href="/generate/theme.html" class="nav-link">
+    <a href="/inventory" class="nav-link">
         <i class="nav-icon fas fa-box"></i>
         <p>Daftar Inventaris</p>
     </a>

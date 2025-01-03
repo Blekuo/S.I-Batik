@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -40,5 +41,25 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class, 'role_users', 'user_id', 'role_id');
+    }
+
+    public function permissions(): BelongsToMany
+    {
+        return $this->belongsToMany(Permission::class, 'permission_users', 'user_id', 'permission_id');
+    }
+
+    public function hasRole($role)
+    {
+        return $this->roles()->where('name', $role)->count() == 1;
+    }
+
+    public function hasPermission($slug)
+    {
+        return $this->permissions()->where('name', $slug)->count() == 1;
     }
 }

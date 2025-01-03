@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Role;
 
 class UserSeeder extends Seeder
 {
@@ -17,14 +18,13 @@ class UserSeeder extends Seeder
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
-            'role' => 'admin',
             'password' => Hash::make('admin')
-        ]);
+        ])->roles()->attach(Role::where('name', 'admin')->first());
+
         User::factory()->create([
             'name' => 'Blue',
             'email' => 'fanafahriyanto11rpl2@gmail.com',
-            'role' => 'admin',
             'password' => Hash::make('admin')
-        ]);
+        ])->roles()->attach(Role::where('name', 'admin')->first());
     }
 }
