@@ -10,7 +10,7 @@ data-accordion="false">
 <li class="nav-item">
     <a href="/inventory" class="nav-link" style="font-size: 17px">
         <i class="nav-icon fas fa-box"></i>
-        <p>Daftar Inventaris</p>
+        <p>Data Inventaris</p>
     </a>
 </li>
 {{--
